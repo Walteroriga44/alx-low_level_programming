@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
  * main - Entry point
  * Description: 'print all possible different combination of two digits'
@@ -6,21 +7,25 @@
  */
 int main(void)
 {
-	int i;
+	int i = 0;
 	int j;
 
-	for (i = 48; i <= 56; i++)
+	while (i <= 8)
 	{
-		for (j = i + 49; j <= 57; j++)
+		j = i + 1;
+		while (j <= 9)
+
 		{
-			putchar(48 + i);
-			putchar(48 + j);
-			if (i != 56 || j != 57)
+			putchar(0 + i);
+			putchar(0 + j);
+			if (i != 8 || j != 9)
 			{
 			putchar(',');
 			putchar(' ');
 			}
+			j++;
 		}
+		i++;
 	}
 	putchar('\n');
 
