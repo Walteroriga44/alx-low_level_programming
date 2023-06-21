@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - print the sum of all mutiples of 3 and 5 upto 1024
