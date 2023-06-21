@@ -5,19 +5,24 @@
 *
 * Return: always 0
 */
+
 void print_alphabet_x10(void)
 {
-	char letter = 'a';
-	int i, j;
+	int j;
+	char i;
 
-	for (i = 0; i < 10; i++)
+	j = 1;
+
+	while (j <= 10)
 	{
-		for (j = 0; j < 26; j++)
+		i = 'a';
+
+		while (i <= 'z')
 		{
-			_putchar(letter);
-			letter++;
+			_putchar(i);
+			i++;
 		}
-		letter = 'a';
+		j++;
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
