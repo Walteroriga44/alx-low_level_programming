@@ -4,12 +4,9 @@
 /**
  * puts2 - prints every other character of a string
  * starting with the first character
- *
  * @str: string to be treated
  * Return: void
- *
  */
-
 void puts2(char *str)
 {
 	int c = 0;
@@ -17,7 +14,6 @@ void puts2(char *str)
 	while (str[c] != '\0')
 	{
 		putchar(str[c]);
-
 		c += 2;
 	}
 	putchar('\n');
