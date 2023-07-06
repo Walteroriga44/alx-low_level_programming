@@ -9,6 +9,12 @@
  */
 
 int check_prime(int n, int i);
+/**
+ * is_prime_number - Checks if a number is prime
+ * @n: The number to check for primality
+ *
+ * Return: 1 if the number is prime, 0 otherwise
+ */
 
 int is_prime_number(int n)
 {
