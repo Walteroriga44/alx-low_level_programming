@@ -41,12 +41,12 @@ int _sqrt_recursion(int n)
  */
 int calculate_sqrt(int n, int start, int end)
 {
+	int mid = (start + end) / 2;
+
 	if (start > end)
 	{
 		return (-1);
 	}
-
-	int mid = (start + end) / 2;
 
 	if (mid == n / mid && n % mid == 0)
 	{
