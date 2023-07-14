@@ -3,22 +3,16 @@
 #include <stdlib.h>
 /**
  * malloc_checked - allocates memory using malloc.
- * @b: The desired size of memory to allocate.
+ * @b: size
  *
- * Returns: Nothing!
+ * Return: nothing!
  */
 void *malloc_checked(unsigned int b)
 {
-	void *p;
+	void *ptr;
 
-	p = malloc(b);
-
-	if (p == NULL)
-	{
-		fprintf(stderr, "Memory allocation failed\n");
+	ptr = malloc(b);
+	if (ptr == NULL)
 		exit(98);
-
-	}
-
-	return (p);
+	return (ptr);
 }
