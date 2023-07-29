@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "list.h"
+#include "lists.h"
 /**
  * print_list - prints all the elements of a list_t list.
  * @h: ptr to the ls
@@ -27,7 +27,7 @@ size_t print_list(const list_t *h)
 
 		if (h != NULL)
 		{
-			printf(", ")
+			printf(", ");
 		}
 	}
 	printf("]\n");
