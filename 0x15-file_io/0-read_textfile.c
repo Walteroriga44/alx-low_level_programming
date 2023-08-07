@@ -41,8 +41,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (-1);
 	}
 
-	free(buffer);
-	close(fd);
+	w = write(STDOUT_FILENO, buffer, t);
+	if (w == -1)
+	{
+		perror("Error writing to STDOUT");
+		close(fd);
+		free(buffer);
+		return (-1);
+	}
 
 	return (w);
 }
