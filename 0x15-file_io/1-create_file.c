@@ -13,8 +13,8 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int file_descriptor;
-	ssize_t bytes_written;
+	int file_descriptor = 0;
+	int bytes_written = 0;
 	int len = 0;
 
 	if (filename == NULL)
@@ -31,6 +31,10 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content != NULL)
 	{
+		for (len = 0; text_content[len];)
+			len++;
+	}
+
 		bytes_written = write(file_descriptor, text_content, len);
 
 		if (bytes_written == -1)
@@ -38,7 +42,6 @@ int create_file(const char *filename, char *text_content)
 			close(file_descriptor);
 			return (-1);
 		}
-	}
 
 	close(file_descriptor);
 	return (1);
